@@ -61,10 +61,10 @@ const Blogs = () => {
       <div className="w-[100%] flex flex-col items-center justify-start gap-4">
         <h1 className="text-5xl text-black mt-10">Blogs</h1>
         <div className="w-[90%] grid grid-cols-1 pv-4 md:grid-cols-3 gap-4">
-          {articles.length === 0 ? (
+          {articles && articles.length === 0 ? (
             <h1 className="text-black">No Blogs</h1>
           ) : (
-            articles.map((item, idx) => (
+            articles && articles.map((item, idx) => (
               <div
                 key={idx}
                 className={`relative bg-white border-2 border-gray-300 px-4 py-3 rounded-xl cursor-pointer transition-all duration-500 ease-in-out overflow-x-hidden overflow-y-scroll scrollbar-none border-box ${expandedIndex === idx
